@@ -1,0 +1,8 @@
+*.vpj
+*.vpw
+*.vpwhistuxml
+*.vtg
+parentFolder/parent
+parentFolder/test
+childFolder/child
+childFolder/test
