@@ -57,13 +57,16 @@ int main(int argc, char* argv[], char* envp[]) {
     
     printf("Нажмите '+' для запуска дочернего процесса, '*' для запуска с другим окружением, 'q' для выхода\n");
     
+    int c;
     while (1) {
         key_input = getchar();
         
-        if (getchar() == '\n') {
+        if (key_input == '\n') {
             continue;
         }
         
+        while ((c = getchar()) != '\n' && c != EOF);
+
         if (key_input == 'q') {
             printf("Завершение работы программы\n");
             break;
