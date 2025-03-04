@@ -6,3 +6,4 @@ parentFolder/parent
 parentFolder/test
 childFolder/child
 childFolder/test
+*.vpwwildcardcache
