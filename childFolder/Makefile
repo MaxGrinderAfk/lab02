@@ -15,7 +15,7 @@ TARGET = child
 
 all: $(TARGET)
 
-$(OBJ_DIR): 
+$(OBJ_DIR):
 	mkdir -p $(OBJ_DIR)
 
 $(TARGET): $(OBJ) | $(OBJ_DIR)
@@ -28,9 +28,9 @@ DEP = $(OBJ:.o=.d)
 -include $(DEP)
 
 clean:
-	rm -rf $(OBJ_DIR) $(TARGET)
+	rm -rf $(OBJ_DIR) Debug $(SRC_DIR)/Debug $(TARGET)
 
-memcheck: debug 
+memcheck: debug
 	valgrind --leak-check=full \
 	--show-leak-kinds=all \
 	--track-origins=yes \
@@ -46,4 +46,3 @@ run: $(TARGET)
 	./$(TARGET)
 
 .PHONY: clean debug release run
-
